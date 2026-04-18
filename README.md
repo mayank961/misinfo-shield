@@ -1,5 +1,4 @@
-﻿@"
----
+﻿---
 title: Misinformation Shield
 emoji: 🛡️
 colorFrom: blue
@@ -11,4 +10,3 @@ pinned: false
 
 # Misinformation Shield API
 AI-powered misinformation detection for Indian languages.
-"@ | Out-File -FilePath README.md -Encoding utf8
