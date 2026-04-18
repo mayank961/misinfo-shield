@@ -1,8 +1,8 @@
-import sqlite3
+﻿import sqlite3
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(BASE_DIR, "database", "cache.db")
+# Use /tmp for HuggingFace Spaces (writable directory)
+DB = "/tmp/cache.db"
 
 def init_cache():
     conn = sqlite3.connect(DB)
