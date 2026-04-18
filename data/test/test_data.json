@@ -1,0 +1,102 @@
+[
+  {
+    "text": "Putting onions in socks overnight cures flu and fever",
+    "label": "Fake"
+  },
+  {
+    "text": "Hand sanitizer causes skin cancer with regular use",
+    "label": "Fake"
+  },
+  {
+    "text": "Intermittent fasting cures type-2 diabetes in just 10 days",
+    "label": "Fake"
+  },
+  {
+    "text": "Essential oils can kill cancer cells without any side effects",
+    "label": "Fake"
+  },
+  {
+    "text": "Wearing a mask for long hours weakens your immune system permanently",
+    "label": "Fake"
+  },
+  {
+    "text": "Copper bracelets completely cure arthritis and joint pain",
+    "label": "Fake"
+  },
+  {
+    "text": "Detox teas flush out all heavy metals and toxins from blood",
+    "label": "Fake"
+  },
+  {
+    "text": "Raw milk is safer and more nutritious than pasteurized milk",
+    "label": "Fake"
+  },
+  {
+    "text": "Bill Gates installed microchips in COVID vaccines for tracking",
+    "label": "Fake"
+  },
+  {
+    "text": "Chloroquine tablets cure all new virus variants instantly",
+    "label": "Fake"
+  },
+  {
+    "text": "Exercise regularly improves heart health and reduces disease risk",
+    "label": "Real"
+  },
+  {
+    "text": "Vaccines have eradicated smallpox and nearly eliminated polio worldwide",
+    "label": "Real"
+  },
+  {
+    "text": "Balanced diet and sleep strengthen natural immunity against infections",
+    "label": "Real"
+  },
+  {
+    "text": "Sunlight exposure helps the body produce vitamin D naturally",
+    "label": "Real"
+  },
+  {
+    "text": "Handwashing with soap for 20 seconds reduces infection spread",
+    "label": "Real"
+  },
+  {
+    "text": "नीम की छाल चबाने से दांतों की सारी समस्या जड़ से खत्म",
+    "label": "Fake"
+  },
+  {
+    "text": "गाय का मूत्र पीने से कैंसर और सभी बीमारियां हमेशा के लिए ठीक",
+    "label": "Fake"
+  },
+  {
+    "text": "मास्क लगाने से ऑक्सीजन कम होकर दिमाग खराब हो जाता है",
+    "label": "Fake"
+  },
+  {
+    "text": "सेब खाने से हर रोज डॉक्टर की जरूरत खत्म हो जाती है",
+    "label": "Fake"
+  },
+  {
+    "text": "नमक पानी गरारे करने से कोरोना वायरस गला छोड़कर भाग जाता है",
+    "label": "Fake"
+  },
+  {
+    "text": "स्वच्छ पानी पीने से शरीर हाइड्रेट रहता है और बीमारियां कम होती हैं",
+    "label": "Real"
+  },
+  {
+    "text": "व्यायाम करने से हृदय स्वस्थ रहता है और रोग प्रतिरोधक क्षमता बढ़ती है",
+    "label": "Real"
+  },
+  {
+    "text": "सूरज की रोशनी से शरीर में विटामिन डी खुद बनता है",
+    "label": "Real"
+  },
+  {
+    "text": "साबुन से हाथ धोने से संक्रमण का खतरा बहुत कम हो जाता है",
+    "label": "Real"
+  },
+  {
+    "text": "संतुलित आहार और अच्छी नींद से रोग प्रतिरोधक क्षमता मजबूत होती है",
+    "label": "Real"
+  }
+]

@@ -1,0 +1,387 @@
+[
+  {
+    "claim": "Garlic can cure coronavirus",
+    "verdict": "Fake",
+    "explanation": "No scientific evidence supports garlic curing COVID-19. WHO confirms only vaccines and medical treatments work.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Vaccines cause infertility",
+    "verdict": "Fake",
+    "explanation": "Large-scale studies by WHO and CDC show no link between COVID vaccines and infertility.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Drinking turmeric milk cures all cancers within 7 days",
+    "verdict": "Fake",
+    "explanation": "Turmeric has anti-inflammatory properties but cannot cure cancer. Claims are unproven and dangerous.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Lemon and honey mixture dissolves kidney stones overnight",
+    "verdict": "Fake",
+    "explanation": "No evidence supports instant dissolution of stones. Medical intervention is required.",
+    "category": "health",
+    "source": "CDC"
+  },
+  {
+    "claim": "Eating raw onions prevents swine flu and all respiratory viruses",
+    "verdict": "Fake",
+    "explanation": "Onions do not prevent viral infections. Vaccines and hygiene are the proven methods.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Apple cider vinegar reverses diabetes in 30 days – no medicine needed",
+    "verdict": "Fake",
+    "explanation": "Vinegar may help slightly with blood sugar but cannot replace diabetes medication.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Baking soda with water cures arthritis and joint pain permanently",
+    "verdict": "Fake",
+    "explanation": "Baking soda has no proven effect on arthritis. Consult doctors for treatment.",
+    "category": "health",
+    "source": "CDC"
+  },
+  {
+    "claim": "5G towers are spreading coronavirus – switch off your phones",
+    "verdict": "Fake",
+    "explanation": "Viruses do not spread via radio waves. 5G is safe and unrelated to COVID.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Colloidal silver kills every virus including new COVID variants",
+    "verdict": "Fake",
+    "explanation": "Colloidal silver is not approved for viruses and can cause serious side effects.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Ginger tea eliminates high blood pressure in one week",
+    "verdict": "Fake",
+    "explanation": "Ginger may help mildly but cannot replace prescribed blood pressure medicine.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Raw garlic and honey mixture cures asthma forever",
+    "verdict": "Fake",
+    "explanation": "No clinical evidence supports this as a permanent asthma cure.",
+    "category": "health",
+    "source": "CDC"
+  },
+  {
+    "claim": "Coconut oil rubbed on skin removes all wrinkles in 3 days",
+    "verdict": "Fake",
+    "explanation": "Coconut oil moisturizes but cannot remove wrinkles or reverse aging.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Neem leaves boiled in water cure dengue in 24 hours",
+    "verdict": "Fake",
+    "explanation": "Neem has no proven effect on dengue. Hospital treatment is essential.",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "Steam inhalation with eucalyptus oil kills all lung infections",
+    "verdict": "Fake",
+    "explanation": "Steam may ease symptoms but does not kill viruses or cure infections.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Aloe vera gel drinks away all stomach ulcers instantly",
+    "verdict": "Fake",
+    "explanation": "Aloe vera may soothe mild issues but cannot instantly cure ulcers.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Black pepper and turmeric paste heals bone fractures without surgery",
+    "verdict": "Fake",
+    "explanation": "Fractures require medical care; herbs cannot replace surgery or casting.",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "Drinking warm water with rock salt flushes out all toxins and COVID",
+    "verdict": "Fake",
+    "explanation": "No evidence that salt water flushes viruses or toxins from the body.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Holy basil (Tulsi) leaves cure thyroid problems in 15 days",
+    "verdict": "Fake",
+    "explanation": "Tulsi has no proven effect on thyroid disorders. Medication is required.",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "Fenugreek seeds soaked overnight reverse fatty liver completely",
+    "verdict": "Fake",
+    "explanation": "Fenugreek may support liver health mildly but cannot reverse fatty liver alone.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Mulethi (licorice) powder ends all cough and cold instantly",
+    "verdict": "Fake",
+    "explanation": "Licorice may soothe throat but does not cure viral colds instantly.",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Breaking: PM Modi announces ₹5000 monthly cash to every citizen",
+    "verdict": "Fake",
+    "explanation": "No such government announcement exists. PIB has clarified this is false.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "Stock market crashes 70% today due to new government policy",
+    "verdict": "Fake",
+    "explanation": "No 70% crash occurred. This is a fabricated headline for panic.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "Scientists discover pill that gives eternal youth – available in India",
+    "verdict": "Fake",
+    "explanation": "No such anti-aging pill exists. Claims are exaggerated and unproven.",
+    "category": "science",
+    "source": "WHO"
+  },
+  {
+    "claim": "Delhi air pollution completely gone overnight after new law",
+    "verdict": "Fake",
+    "explanation": "Air quality cannot improve overnight. This claim is false.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "India wins Cricket World Cup 2026 in record 3 days",
+    "verdict": "Fake",
+    "explanation": "The tournament has not concluded. This is a hoax circulating on social media.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "RBI to launch new ₹1000 note with Modi photo next week",
+    "verdict": "Fake",
+    "explanation": "RBI has not announced any such note. PIB confirms it is fake news.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "All schools closed permanently due to new education policy",
+    "verdict": "Fake",
+    "explanation": "No permanent school closure policy exists. This is misinformation.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "Petrol price drops to ₹30 per litre from tomorrow",
+    "verdict": "Fake",
+    "explanation": "No such price reduction announced by the government.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "China admits defeat in border clash – India takes full control",
+    "verdict": "Fake",
+    "explanation": "No official statement from either government supports this claim.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "Elon Musk donates ₹1 lakh crore to Indian farmers",
+    "verdict": "Fake",
+    "explanation": "No such donation has been made or announced.",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "नींबू और शहद से कैंसर जड़ से खत्म हो जाता है",
+    "verdict": "Fake",
+    "explanation": "नींबू और शहद से कैंसर ठीक नहीं होता। यह दावा वैज्ञानिक रूप से गलत है।",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "हल्दी वाला दूध पीने से कोविड और सभी वायरस भाग जाते हैं",
+    "verdict": "Fake",
+    "explanation": "हल्दी वाला दूध वायरस का इलाज नहीं है। WHO केवल वैक्सीन की सलाह देता है।",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "प्याज खाने से स्वाइन फ्लू कभी नहीं होगा – फॉरवर्ड करें",
+    "verdict": "Fake",
+    "explanation": "प्याज से फ्लू नहीं रुकता। यह सामान्य वायरल दावा है।",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "5G टावर से कोरोना फैल रहा है, फोन बंद रखें",
+    "verdict": "Fake",
+    "explanation": "5G और कोरोना का कोई संबंध नहीं। रेडियो तरंगें वायरस नहीं फैलातीं।",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "नीम की पत्ती उबालकर पीने से डेंगू 24 घंटे में ठीक",
+    "verdict": "Fake",
+    "explanation": "नीम से डेंगू ठीक नहीं होता। अस्पताल में इलाज जरूरी है।",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "तुलसी की पत्तियां थायरॉइड रोग हमेशा के लिए खत्म कर देती हैं",
+    "verdict": "Fake",
+    "explanation": "तुलसी थायरॉइड का इलाज नहीं कर सकती। दवा जरूरी है।",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "मेथी दाने रात भर भिगोकर खाने से फैटी लीवर गायब",
+    "verdict": "Fake",
+    "explanation": "मेथी लीवर की समस्या ठीक नहीं करती। डॉक्टर से सलाह लें।",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "बेकिंग सोडा पानी से जोड़ों का दर्द जड़ से खत्म",
+    "verdict": "Fake",
+    "explanation": "बेकिंग सोडा से जोड़ों का दर्द स्थायी रूप से नहीं जाता।",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "लहसुन और शहद का मिश्रण अस्थमा हमेशा के लिए ठीक",
+    "verdict": "Fake",
+    "explanation": "यह मिश्रण अस्थमा का स्थायी इलाज नहीं है।",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "उत्तर प्रदेश में BJP को वोट दो तो हर महीने ₹5000 मिलेंगे",
+    "verdict": "Fake",
+    "explanation": "ऐसी कोई सरकारी योजना नहीं है। PIB ने इसे फर्जी बताया है।",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "कल से पेट्रोल ₹30 प्रति लीटर हो जाएगा – मोदी सरकार",
+    "verdict": "Fake",
+    "explanation": "पेट्रोल की कीमत ₹30 करने की कोई घोषणा नहीं हुई।",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "दिल्ली में प्रदूषण रातोंरात खत्म, नया कानून लागू",
+    "verdict": "Fake",
+    "explanation": "प्रदूषण रातोंरात खत्म नहीं हो सकता। यह दावा झूठा है।",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "स्कूल हमेशा के लिए बंद – नई शिक्षा नीति",
+    "verdict": "Fake",
+    "explanation": "स्कूलों को स्थायी रूप से बंद करने की कोई नीति नहीं है।",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "भारत ने विश्व कप 2026 3 दिन में जीत लिया",
+    "verdict": "Fake",
+    "explanation": "विश्व कप अभी समाप्त नहीं हुआ। यह फर्जी खबर है।",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "आरबीआई नया ₹1000 नोट जारी कर रहा है जिसमें मोदी जी का फोटो",
+    "verdict": "Fake",
+    "explanation": "आरबीआई ने ऐसा कोई नोट जारी करने की घोषणा नहीं की।",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "एलन मस्क ने भारतीय किसानों को 1 लाख करोड़ रुपये दान दिए",
+    "verdict": "Fake",
+    "explanation": "इस तरह का कोई दान नहीं दिया गया। फर्जी खबर है।",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "कोरोना वैक्सीन से बांझपन हो जाता है – डॉक्टरों की चेतावनी",
+    "verdict": "Fake",
+    "explanation": "वैक्सीन से बांझपन का कोई वैज्ञानिक प्रमाण नहीं है।",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "नमक वाला गर्म पानी पीने से सारी बीमारियां खत्म",
+    "verdict": "Fake",
+    "explanation": "नमक पानी से कोई बीमारी जड़ से नहीं खत्म होती।",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "मुलेठी पाउडर से खांसी जुकाम एक घंटे में ठीक",
+    "verdict": "Fake",
+    "explanation": "मुलेठी लक्षण कम कर सकती है लेकिन वायरस का इलाज नहीं।",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "एलोवेरा जेल पीने से पेट के अल्सर हमेशा के लिए गए",
+    "verdict": "Fake",
+    "explanation": "एलोवेरा अल्सर का तुरंत इलाज नहीं कर सकता।",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "काली मिर्च और हल्दी का लेप हड्डी टूटने पर सर्जरी नहीं लगेगी",
+    "verdict": "Fake",
+    "explanation": "हड्डी टूटने पर हर्बल लेप से सर्जरी नहीं बच सकती।",
+    "category": "health",
+    "source": "PIB"
+  },
+  {
+    "claim": "नए वायरस से बचने के लिए सिर्फ भाप लें – वैक्सीन की जरूरत नहीं",
+    "verdict": "Fake",
+    "explanation": "भाप से वायरस नहीं मरते। वैक्सीन और सावधानी जरूरी है।",
+    "category": "health",
+    "source": "WHO"
+  },
+  {
+    "claim": "Breaking: 2026 में भारत अमरत्व की गोली लॉन्च करेगा",
+    "verdict": "Fake",
+    "explanation": "ऐसी कोई गोली या घोषणा नहीं है। यह पूरी तरह फर्जी है।",
+    "category": "science",
+    "source": "PIB"
+  },
+  {
+    "claim": "चीन सीमा पर हार मान गया – भारत ने पूरा कब्जा ले लिया",
+    "verdict": "Fake",
+    "explanation": "सरकार की ओर से ऐसी कोई आधिकारिक पुष्टि नहीं हुई।",
+    "category": "politics",
+    "source": "PIB"
+  },
+  {
+    "claim": "Raw milk is safer and more nutritious than pasteurized milk",
+    "verdict": "Fake",
+    "explanation": "Pasteurization kills harmful bacteria. Raw milk can carry serious health risks.",
+    "category": "health",
+    "source": "FDA/WHO"
+  }
+]

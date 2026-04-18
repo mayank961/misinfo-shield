@@ -1,0 +1,35 @@
+﻿@"
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+backend/venv/
+*.egg-info/
+
+# Model (too large for git)
+models/
+
+# Database files
+data/misinfo.db
+backend/database/cache.db
+backend/database/facts.db
+
+# Logs
+backend/logs/
+
+# Environment
+.env
+
+# Node
+frontend/node_modules/
+frontend/build/
+
+# Datasets (too large)
+datasets/
+
+# OS
+.DS_Store
+Thumbs.db
+"@ | Out-File -FilePath .gitignore -Encoding utf8
