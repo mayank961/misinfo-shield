@@ -29,6 +29,10 @@ frontend/build/
 # Datasets (too large)
 datasets/
 
+# Large data files
+data/processed/clean_data.json
+data/raw/news_data.json
+
 # OS
 .DS_Store
 Thumbs.db
