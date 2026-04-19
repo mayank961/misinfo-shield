@@ -5,7 +5,12 @@ from utils.cache import init_cache
 from routes.admin import router as admin_router
 
 app = FastAPI()
+from backend.utils.database import init_db
 
+@app.on_event("startup")
+def startup_event():
+    init_db()
+    print("✅ Database initialized on startup")
 init_cache()
 
 app.add_middleware(
