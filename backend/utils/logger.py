@@ -1,7 +1,12 @@
-import sqlite3
+﻿import sqlite3
+import os
 from pathlib import Path
 
-DB_PATH = Path(__file__).resolve().parents[2] / "data" / "misinfo.db"
+# Use same path as config
+if os.path.exists("/tmp") and os.environ.get("SPACE_ID"):
+    DB_PATH = Path("/tmp/misinfo.db")
+else:
+    DB_PATH = Path(__file__).resolve().parents[2] / "data" / "misinfo.db"
 
 def log_request(result: dict):
     try:

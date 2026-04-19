@@ -1,17 +1,21 @@
-import sqlite3
+﻿import sqlite3
 import torch
+import os
 from pathlib import Path
 from sentence_transformers import SentenceTransformer, util
 
-DB_PATH = Path(__file__).resolve().parents[2] / "data" / "misinfo.db"
+# Use same path as config
+if os.path.exists("/tmp") and os.environ.get("SPACE_ID"):
+    DB_PATH = Path("/tmp/misinfo.db")
+else:
+    DB_PATH = Path(__file__).resolve().parents[2] / "data" / "misinfo.db"
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 SIM_THRESHOLD = 0.72
 
-# Cache
 _facts_cache = []
 _embeddings_cache = None
-_cache_count = 0  # track how many facts were loaded
+_cache_count = 0
 
 def load_facts_from_db():
     global _facts_cache, _embeddings_cache, _cache_count
@@ -25,7 +29,6 @@ def load_facts_from_db():
 
         current_count = len(rows)
 
-        # Only reload if new facts were added
         if current_count != _cache_count:
             _facts_cache = [{"claim": r[0], "verdict": r[1], "explanation": r[2]} for r in rows]
             texts = [f["claim"] for f in _facts_cache]
@@ -38,7 +41,6 @@ def load_facts_from_db():
 
 
 def semantic_fact_check(text: str):
-    # Reload if new facts added
     load_facts_from_db()
 
     if not _facts_cache or _embeddings_cache is None:
@@ -61,6 +63,4 @@ def semantic_fact_check(text: str):
 
     return {"matched": False}
 
-
-# Initial load at startup
 load_facts_from_db()
