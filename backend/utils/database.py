@@ -1,18 +1,14 @@
 ﻿import sqlite3
 import json
-from pathlib import Path
 import os
+from pathlib import Path
 
-# -------- Correct HF detection --------
-BASE_DIR = Path(__file__).resolve().parents[2]
-
-ON_HF = os.path.exists("/.dockerenv") or os.path.exists("/home/user/app")
-
-if ON_HF:
-    DB_PATH = Path("/tmp/misinfo.db")  # writable on HF
+# Use /tmp for HuggingFace Spaces
+if os.path.exists("/tmp") and os.environ.get("SPACE_ID"):
+    DB_PATH = Path("/tmp/misinfo.db")
 else:
-    DB_PATH = BASE_DIR / "data" / "misinfo.db"
-# -------------------------------------
+    DB_PATH = Path(__file__).resolve().parents[2] / "data" / "misinfo.db"
+
 def get_connection():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(DB_PATH))
@@ -64,7 +60,7 @@ def init_db():
 
     conn.commit()
 
-    # Auto-load facts from JSON if DB is empty
+    # Always load facts from JSON if DB is empty
     count = cursor.execute("SELECT COUNT(*) FROM fact_db").fetchone()[0]
     if count == 0:
         fact_path = Path(__file__).resolve().parents[2] / "data" / "processed" / "fact_db.json"
@@ -83,7 +79,9 @@ def init_db():
                     fact.get("source", "manual")
                 ))
             conn.commit()
-            print(f"✅ Loaded {len(facts)} facts from JSON")
+            print(f"✅ Auto-loaded {len(facts)} facts from JSON")
+        else:
+            print(f"⚠️ fact_db.json not found at {fact_path}")
 
     conn.close()
     print(f"✅ DB ready at: {DB_PATH}")
