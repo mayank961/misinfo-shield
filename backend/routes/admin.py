@@ -1,14 +1,15 @@
 from fastapi import APIRouter
 import sqlite3
 from pathlib import Path
-
+from backend.utils.claim_normalizer import normalize_claim_for_api
 router = APIRouter()
 
 
+from backend.config import DB_PATH
 
-# Always point to /app on Hugging Face and still work locally
-BASE_DIR = Path(__file__).resolve().parents[3]
-DB_PATH = BASE_DIR / "data" / "misinfo.db"
+
+def get_conn():
+    return sqlite3.connect(str(DB_PATH))
 def get_conn():
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
@@ -95,11 +96,12 @@ def approve_claim(claim_id: int, data: dict):
     claim_text = row["text"]
 
     # Add to fact_db
-    conn.execute("""
-        INSERT INTO fact_db (claim, verdict, explanation, category, source)
-        VALUES (?, ?, ?, ?, ?)
-    """, (claim_text, verdict, explanation, "pending_review", "manual"))
+    normalized = normalize_claim_for_api(claim_text)
 
+    conn.execute("""
+        INSERT INTO fact_db (claim, normalized_claim, verdict, explanation, category, source)
+            VALUES (?, ?, ?, ?, ?, ?)
+    """, (claim_text, normalized, verdict, explanation, "pending_review", "manual"))
     # Mark as reviewed
     conn.execute(
         "UPDATE pending_claims SET reviewed = 1, verdict = ? WHERE id = ?",
@@ -110,17 +112,17 @@ def approve_claim(claim_id: int, data: dict):
     conn.close()
 
     # ✅ Clear cache so new fact takes effect immediately
+    # ✅ Clear cache so new fact takes effect immediately
     try:
-        cache_conn = sqlite3.connect("database/cache.db")
+        import os
+        cache_db = "/tmp/cache.db" if os.path.exists("/tmp/cache.db") else "database/cache.db"
+        cache_conn = sqlite3.connect(cache_db)
         cache_conn.execute("DELETE FROM cache WHERE key LIKE ?", (f"%{claim_text[:20].lower()}%",))
         cache_conn.commit()
         cache_conn.close()
         print(f"🗑️ Cache cleared for: {claim_text[:40]}")
     except Exception as e:
         print(f"⚠️ Cache clear failed: {e}")
-
-    return {"success": True, "claim": claim_text, "verdict": verdict}
-
 
 # ✅ All Facts in DB
 @router.get("/admin/facts")
