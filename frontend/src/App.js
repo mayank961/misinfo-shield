@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import AdminDashboard from "./AdminDashboard";
 
 const styles = `
@@ -491,7 +491,7 @@ function DetectApp() {
     setLoading(true);
     setResult(null);
     try {
-      const response = await fetch("http://127.0.0.1:8000/detect", {
+      const response = await fetch("https://mayankbh765-misinfo-shield.hf.space/detect",  {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text }),

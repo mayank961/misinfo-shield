@@ -1,9 +1,19 @@
 ﻿import sqlite3
 import os
+import json
 
-# Use /tmp for HuggingFace Spaces (writable directory)
-DB = "/tmp/cache.db"
+# ---------- PATH SETUP (works local + HF) ----------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, "..", ".."))
 
+# Detect Hugging Face environment
+ON_HF = os.path.exists("/.dockerenv") or os.path.exists("/home/user/app")
+
+if ON_HF:
+    DB = "/tmp/misinfo.db"  # only writable place on HF
+else:
+    DB = os.path.join(PROJECT_ROOT, "misinfo.db")
+# ---------------------------------------------------
 def init_cache():
     conn = sqlite3.connect(DB)
     cur = conn.cursor()

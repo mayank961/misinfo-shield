@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
-const API = "http://127.0.0.1:8000";
+const API = window.location.hostname === "localhost"
+  ? "http://127.0.0.1:8000"
+  : "https://mayankbh765-misinfo-shield.hf.space";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');

@@ -1,14 +1,18 @@
 ﻿import sqlite3
 import json
 from pathlib import Path
-
-# Use /tmp for HuggingFace Spaces
 import os
-if os.path.exists("/tmp"):
-    DB_PATH = Path("/tmp/misinfo.db")
-else:
-    DB_PATH = Path(__file__).resolve().parents[2] / "data" / "misinfo.db"
 
+# -------- Correct HF detection --------
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+ON_HF = os.path.exists("/.dockerenv") or os.path.exists("/home/user/app")
+
+if ON_HF:
+    DB_PATH = Path("/tmp/misinfo.db")  # writable on HF
+else:
+    DB_PATH = BASE_DIR / "data" / "misinfo.db"
+# -------------------------------------
 def get_connection():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(DB_PATH))
