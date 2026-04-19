@@ -115,7 +115,7 @@ def approve_claim(claim_id: int, data: dict):
     # ✅ Clear cache so new fact takes effect immediately
     try:
         import os
-        cache_db = "/tmp/cache.db" if os.path.exists("/tmp/cache.db") else "database/cache.db"
+        cache_db = "/tmp/cache.db" if os.environ.get("SPACE_ID") else "database/cache.db"
         cache_conn = sqlite3.connect(cache_db)
         cache_conn.execute("DELETE FROM cache WHERE key LIKE ?", (f"%{claim_text[:20].lower()}%",))
         cache_conn.commit()
