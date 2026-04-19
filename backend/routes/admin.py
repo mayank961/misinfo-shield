@@ -96,12 +96,12 @@ def approve_claim(claim_id: int, data: dict):
     claim_text = row["text"]
 
     # Add to fact_db
-    normalized = normalize_claim_for_api(claim_text)
+    
 
     conn.execute("""
-        INSERT INTO fact_db (claim, normalized_claim, verdict, explanation, category, source)
-            VALUES (?, ?, ?, ?, ?, ?)
-    """, (claim_text, normalized, verdict, explanation, "pending_review", "manual"))
+        INSERT INTO fact_db (claim, verdict, explanation, category, source)
+        VALUES (?, ?, ?, ?, ?)
+    """, (claim_text, verdict, explanation, "pending_review", "manual"))
     # Mark as reviewed
     conn.execute(
         "UPDATE pending_claims SET reviewed = 1, verdict = ? WHERE id = ?",
