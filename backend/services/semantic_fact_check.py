@@ -1,6 +1,7 @@
 ﻿import sqlite3
 import torch
 import os
+import time
 from pathlib import Path
 from sentence_transformers import SentenceTransformer, util
 
@@ -20,24 +21,27 @@ _cache_count = 0
 def load_facts_from_db():
     global _facts_cache, _embeddings_cache, _cache_count
 
-    try:
-        conn = sqlite3.connect(str(DB_PATH))
-        cursor = conn.cursor()
-        cursor.execute("SELECT claim, verdict, explanation FROM fact_db")
-        rows = cursor.fetchall()
-        conn.close()
+    # Wait for DB to be ready (max 10 seconds)
+    for attempt in range(10):
+        try:
+            conn = sqlite3.connect(str(DB_PATH))
+            cursor = conn.cursor()
+            cursor.execute("SELECT claim, verdict, explanation FROM fact_db")
+            rows = cursor.fetchall()
+            conn.close()
 
-        current_count = len(rows)
+            current_count = len(rows)
+            if current_count != _cache_count:
+                _facts_cache = [{"claim": r[0], "verdict": r[1], "explanation": r[2]} for r in rows]
+                texts = [f["claim"] for f in _facts_cache]
+                _embeddings_cache = model.encode(texts, convert_to_tensor=True) if texts else None
+                _cache_count = current_count
+                print(f"🔄 Fact DB reloaded: {current_count} facts")
+            return
 
-        if current_count != _cache_count:
-            _facts_cache = [{"claim": r[0], "verdict": r[1], "explanation": r[2]} for r in rows]
-            texts = [f["claim"] for f in _facts_cache]
-            _embeddings_cache = model.encode(texts, convert_to_tensor=True) if texts else None
-            _cache_count = current_count
-            print(f"🔄 Fact DB reloaded: {current_count} facts")
-
-    except Exception as e:
-        print(f"⚠️ Could not load facts: {e}")
+        except Exception as e:
+            print(f"⚠️ Attempt {attempt+1}: Could not load facts: {e}")
+            time.sleep(1)
 
 
 def semantic_fact_check(text: str):
@@ -63,4 +67,4 @@ def semantic_fact_check(text: str):
 
     return {"matched": False}
 
-load_facts_from_db()
+# Don't load at import time - load on first request
