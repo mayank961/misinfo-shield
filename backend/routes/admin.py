@@ -4,8 +4,11 @@ from pathlib import Path
 
 router = APIRouter()
 
-DB_PATH = Path(__file__).resolve().parents[2] / "data" / "misinfo.db"
 
+
+# Always point to /app on Hugging Face and still work locally
+BASE_DIR = Path(__file__).resolve().parents[3]
+DB_PATH = BASE_DIR / "data" / "misinfo.db"
 def get_conn():
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
